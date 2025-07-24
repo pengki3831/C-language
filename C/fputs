@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int age;
+	char c_age[4];
+	char name[20];
+
+	printf("나이 입력:");
+	//scanf_s("%s", &c_age);//enter를 먹어버리는 버그가 생김 
+	gets(c_age);
+	printf("%s", c_age);
+	age = atoi(c_age);//문자열을 정수로 변환하는 함수 
+
+	printf("이름 입력:");
+	gets(name);
+	printf("나이:%d, 이름:%s\n", age, name);
+
+
+
+	return 0;
+}
